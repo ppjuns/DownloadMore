@@ -70,7 +70,7 @@ public class DownloadService extends Service {
                     .execute(new FileCallBack(Environment.getExternalStorageDirectory().getAbsolutePath(), "xxx.apk") {
                         @Override
                         public void inProgress(float progress) {
-                            //Log.i("TAG", (int) (100 * progress) + "");
+
                             listener.onProgress((int) (100 * progress));
                             NotificationCompat.Builder builder = new NotificationCompat.Builder(DownloadService.this);
                             builder.setContentTitle("火辣健身");
